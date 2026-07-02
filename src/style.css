@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.5 0.134 242.749);
+    --primary-foreground: oklch(0.977 0.013 236.62);
+    --secondary: oklch(0.967 0.001 286.375);
+    --secondary-foreground: oklch(0.21 0.006 285.885);
+    --border: oklch(0.922 0 0);
+    --radius: 0.625rem;
+    scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: oklch(0.145 0 0);
+        --foreground: oklch(0.985 0 0);
+        --card: oklch(0.205 0 0);
+        --card-foreground: oklch(0.985 0 0);
+        --primary: oklch(0.443 0.11 240.79);
+        --primary-foreground: oklch(0.977 0.013 236.62);
+        --secondary: oklch(0.274 0.006 286.033);
+        --secondary-foreground: oklch(0.985 0 0);
+        --border: oklch(1 0 0 / 10%);
+    }
+}
+
+.game {
+    --background: oklch(88% 0.011 106.6);
+    --foreground: oklch(39.4% 0.023 107.4);
+    --card: oklch(93% 0.007 106.5);
+    --card-foreground: oklch(39.4% 0.023 107.4);
+    --primary: oklch(39.4% 0.023 107.4);
+    --primary-foreground: oklch(0.977 0.013 236.62);
+    --secondary: oklch(96.6% 0.005 106.5);
+    --secondary-foreground: oklch(0.21 0.006 285.885);
+    --border: oklch(73.7% 0.021 106.9);
+    --radius: 0.625rem;
+    --font-game: "VT323";
+}
+
+@theme {
+    --font-game: var(--font-game);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-border: var(--border);
+    --radius-radius: var(--radius);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 300ms;
+}
